@@ -1,0 +1,4 @@
+
+#Ignore these
+demos/stanford-corenlp/**/*
+demos/*.zip
