@@ -8,7 +8,7 @@ import codecs
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
 
 
-file_text = open("source.txt", 'r').read()
+file_text = open("../source.txt", 'r').read()
 
 #nltk.download
 #if wordnet corpus not present
@@ -18,7 +18,6 @@ def nltk_tokenize(text):
 
     tknzr = TweetTokenizer()
     tokens = tknzr.tokenize(text)
-
     return tokens
 
 def nltk_lemmatize(tokens):
@@ -27,8 +26,10 @@ def nltk_lemmatize(tokens):
         tokens[i] = wnl.lemmatize(tokens[i])
     return tokens
 
-tokens = nltk_tokenize(file_text)
-print 'tokenized: ', tokens
 
-tokens = nltk_lemmatize(tokens)
-print 'lemmatized', tokens
+if __name__ == '__main__':	
+	tokens = nltk_tokenize(file_text)
+	print 'tokenized: ', tokens
+
+	tokens = nltk_lemmatize(tokens)
+	print 'lemmatized', tokens

@@ -1,4 +1,15 @@
 
 #Ignore these
-demos/stanford-corenlp/**/*
-demos/*.zip
+**/stanford-corenlp/*
+**/*.zip
+
+#Ignore metadata
+**/.idea/*
+**/__pycache__/*
+**/*.coverage
+
+#Ignore code coverage export
+**/htmlcov/*
+
+#Ignore python bytecode files
+**/*.pyc
