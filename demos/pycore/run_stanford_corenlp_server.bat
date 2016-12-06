@@ -1,1 +1,1 @@
-﻿cd stanford-corenlp/ & java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer
+cd stanford-corenlp-full-2016-10-31/ & java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer

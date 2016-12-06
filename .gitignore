@@ -1,6 +1,6 @@
 
 #Ignore these
-**/stanford-corenlp/*
+**/stanford-corenlp*/*
 **/*.zip
 
 #Ignore metadata
