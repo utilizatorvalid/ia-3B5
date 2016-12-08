@@ -3,6 +3,8 @@
 from nltk.tokenize import TweetTokenizer
 from nltk.stem import WordNetLemmatizer
 
+# https://stackoverflow.com/questions/1902967/nltk-how-to-find-out-what-corpora-are-installed-from-within-python
+
 import sys
 import codecs
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout)
