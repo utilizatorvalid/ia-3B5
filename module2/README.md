@@ -3,6 +3,24 @@ Artificial Intelligence project
 
 ## Module 2
 
+## Team members
+
+Atodiresei Costel-Sergiu
+Bonteanu Ioan-Andrei
+Colibaba Valentin
+Dumea Alexandru
+Dumitru Bogdan
+Lebada Ciprian
+Nechita Rares
+Tifui Vali Andrei
+
+## Resources and tehnologies
+
+Python
+DBpedia
+AIML
+protege
+
 ## Updates
 
 **Log**:
