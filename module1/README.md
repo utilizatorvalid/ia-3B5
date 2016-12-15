@@ -3,16 +3,18 @@ Artificial Intelligence project
 
 ## Module 1
 
-## Updates
-
 **Log**:
 + `This section will be updated soon`
 
-<!-- Webpage: [2b5.github.io/ia-3B5/](https://2b5.github.io/ia-3B5/) -->
+## Team members:
++ Focsa Marian
++ Gabor Silviu
++ Grigoras Simona
++ Groza Vasile
++ Lupu Silviu
++ Miron Dorin
 
-#### Folder structure (example):
-+ `nltk/` and `pycore/` - implementations - tokenize and lemmatize
-  + both have tests, which you can run by: `py -2.7 test_sample.py [-v]` (verbose argument optional)
+## Resources and tehnologies
 
 
 ## Useful Links
