@@ -1,14 +1,15 @@
-var Requester = require("./services/requester")
+var Requester = require("./requester.js");
 const AnswerBot = require("./data.js");
 const answerBot = new AnswerBot()
-
+const baseAddress = 'https://3668928a.ngrok.io';
 class BotCore{
 
   handle_message(input_message, cb){
-    var requester = new Requester('http://localhost', '8099', input_message);
+    var requester = new Requester(baseAddress + '?question=' + input_message);
     requester.doRequest(cb);
+    //cb("DA");
   }
   
 }
 
-module.exports = BotCore;
+module.exports = BotCore
