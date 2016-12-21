@@ -11,14 +11,21 @@ const Bot = require('./index.js');
 const path = require('path');
 const BotCore = require('./bot-core.js');
 
-var messengerButton = "<html><head><title>Facebook Messenger Bot</title></head><body><script>window.fbAsyncInit = function() { FB.init({ appId: "+process.env.APP_ID+", xfbml: true, version: \"v2.8\" }); }; (function(d, s, id){ var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/en_US/sdk.js'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); </script> <h3>Facebook Messenger Bot Example</h3> <div class=\"fb-messengermessageus\" messenger_app_id=\""+process.env.APP_ID+"\" page_id=\""+process.env.PAGE_ID+"\" color=\"blue\" size=\"large\"></div><br><br><br><hr><p><a href=\"https://gomix.com/#!/remix/messenger-bot/ca73ace5-3fff-4b8f-81c5-c64452145271\"><img src=\"https://gomix.com/images/background-light/remix-on-gomix.svg\"></a></p><p><a href=\"https://gomix.com/#!/project/messenger-bot\">View Code</a></p></body></html>";
+// Init tokens if not configured
+process.env.PAGE_TOKEN = process.env.PAGE_TOKEN || "EAAaFZA3zelxoBAAImuN1ZBiJoVguJ6AQUNbv09wrC8fi7S18EUcCoivw2drErBxlycwcN4hZAqycZBHxr3ZAGz9coYAZC4d6LXtm6BUGz0S1kyQ9P1CvFPsZCYNgVbu5rAbkaSmDv0UhYZAuZBwm8T0YDwNXhPZBoUnw7nbI6BPD4wfAZDZD";
+process.env.VERIFY_TOKEN = process.env.VERIFY_TOKEN || "thisisthecatassistantwiththetacitrainbow";
+process.env.APP_SECRET = process.env.APP_SECRET || "e70ed14b68ed0fdf2f6d6d999c213898";
+process.env.PAGE_ID = process.env.PAGE_ID || "351647861867213";
+process.env.APP_ID = process.env.APP_ID || "1835529383352090";
+
+var messengerButton = "<html><head><title>Cat Assistant Chat Bot</title></head><body><script>window.fbAsyncInit = function() { FB.init({ appId: "+process.env.APP_ID+", xfbml: true, version: \"v2.8\" }); }; (function(d, s, id){ var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/en_US/sdk.js'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); </script> <h3>Cat Assistant Chat Bot</h3> <div class=\"fb-messengermessageus\" messenger_app_id=\""+process.env.APP_ID+"\" page_id=\""+process.env.PAGE_ID+"\" color=\"blue\" size=\"large\"></div><br><br><br><hr></body></html>";
 
 // We define a new variable `bot`, which takes the tokens and secret supplied in `.env` and creates a new `Bot` instance,
 // which utilizes the messenger-bot library.
 let bot = new Bot({
-  token: process.env.PAGE_TOKEN,
-  verify: process.env.VERIFY_TOKEN,
-  app_secret: process.env.APP_SECRET
+  token: process.env.PAGE_TOKEN || "EAAaFZA3zelxoBAAImuN1ZBiJoVguJ6AQUNbv09wrC8fi7S18EUcCoivw2drErBxlycwcN4hZAqycZBHxr3ZAGz9coYAZC4d6LXtm6BUGz0S1kyQ9P1CvFPsZCYNgVbu5rAbkaSmDv0UhYZAuZBwm8T0YDwNXhPZBoUnw7nbI6BPD4wfAZDZD",
+  verify: process.env.VERIFY_TOKEN || "thisisthecatassistantwiththetacitrainbow",
+  app_secret: process.env.APP_SECRET || "e70ed14b68ed0fdf2f6d6d999c213898"
 });
 let messageProcessor = new BotCore();
 
