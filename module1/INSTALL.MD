@@ -1,5 +1,6 @@
 # Cat Assistant installation instructions
-### For localhost
+
+## Configure Facebook Messenger For localhost
 
 
 1. Unzip _ngrok.zip_ to a local folder
@@ -24,3 +25,9 @@
 ![](./images/dev_4.png)
 
 ### If everything went OK, the bot should be available now at your ngrok address.
+
+
+## Configure Data Module
+1. `pip install cherrypy`
+2. `pip install aiml`
+3. `python bot_response_api.py`

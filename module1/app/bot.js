@@ -39,19 +39,20 @@ bot.on('error', (err) => {
 // handling any errors that occur.
 bot.on('message', (payload, reply) => {
   let userInput = payload.message.text;
-  let text = messageProcessor.handle_message(userInput);
-  bot.getProfile(payload.sender.id, (err, profile) => {
-    if (err) { console.log(err); }
-    else {
-      reply({ text }, (err) => {
-        if (err) console.log(err);
-        
-        if(profile)
-          console.log(`Echoed back to ${profile.first_name} ${profile.last_name}: ${text}`);
-        else
-          console.log('Cannot get sender profile',profile)
-      });
-    }
+  messageProcessor.handle_message(userInput, function(text){
+      bot.getProfile(payload.sender.id, (err, profile) => {
+          if (err) { console.log(err); }
+          else {
+            reply({ text }, (err) => {
+              if (err) console.log(err);
+              
+              if(profile)
+                console.log(`Echoed back to ${profile.first_name} ${profile.last_name}: ${text}`);
+              else
+                console.log('Cannot get sender profile',profile)
+            });
+          }
+        });
   });
 });
 

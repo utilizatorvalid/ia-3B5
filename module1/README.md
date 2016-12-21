@@ -8,8 +8,8 @@
 + Check [Installation Guide](./INSTALL.MD)
 
 ## Talk to the Bot
-+ [Cat Assistant Bot on Messenger](https://www.messenger.com/t/catassistantrainbow)
-+ [Temporary Bot Page](https://7b655bda.ngrok.io/)
++ Run In the directory `module2/Bot/` run `python bot_response_api.py`; it starts a server on [http://localhost:8099](http://localhost:8099)
++ Go to [Cat Assistant Bot on Messenger](https://www.messenger.com/t/catassistantrainbow) or to [Temporary Bot Page](https://7b655bda.ngrok.io/)
 
 ## History:
 1. Dialog Samples
