@@ -1,22 +1,28 @@
-# ia-3B5
-Artificial Intelligence project
+# Cat Assistant Chat Bot <img src="cat_tied.png" alt="The Cat Assistant Chat Bot" style="width: 50px; margin-bottom: -15px;"/>
+## The Brain Module
 
-## Module 1
 
-**Log**:
-+ `This section will be updated soon`
+
+## History:
+1. Dialog Samples
 
 ## Team members:
-+ Focsa Marian
++ Focșa Marian
 + Gabor Silviu
-+ Grigoras Simona
++ Grigoraș Simona
 + Groza Vasile
 + Lupu Silviu
 + Miron Dorin
 
 ## Resources and tehnologies
-
++ [Node.js (Javascript runtime for development)](https://nodejs.org/en/)
++ [Alice Standard AIML Sets (for answers inspiration)](https://www.chatbots.org/ai_zone/viewthread/492/)
++ [Bot Logo (from Iconfinder - Licensed under Creative Commons)](https://www.iconfinder.com/icons/182515/cat_tied_yarn_icon#size=256)
++ [Facebook Graph API v2.8](https://developers.facebook.com/docs/graph-api) (calls to the API through the [Official SDK](https://developers.facebook.com/docs/javascript/quickstart) and use of the [Messenger Platform](https://github.com/fbsamples/messenger-platform-samples) - all of this for the connection with the [Messenger](https://www.messenger.com/) platform)
 
 ## Useful Links
-+ [luis.ai](https://www.luis.ai/)
-  + wrapper: [pypi/luis/2.00](https://pypi.python.org/pypi/luis/2.0.0)
++ [Yoko Chatbot (for administrative inspiration)](http://yokobot.com/index.php?p=about&s=miniuniverse)
++ [Chatbot Fundamentals @worldwritetable (for basic chatbot tutoring)](https://apps.worldwritable.com/tutorials/chatbot/)
++ [Chatbot 101 (for ideas about existing implementations)](https://www.chatbots.org/ai_zone/viewthread/492/)
++ [Messenger bot tutorial (basic example of integrating with the facebook interface)](https://github.com/jw84/messenger-bot-tutorial)
++ [Claudia AIML Bot (basic example about a bot written in Node.js)](https://github.com/kirkins/Claudia-AIML-Bot-2)
