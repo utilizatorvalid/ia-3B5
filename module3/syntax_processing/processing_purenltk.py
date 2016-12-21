@@ -1,7 +1,7 @@
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 _wordnet = nltk.corpus.wordnet
-
+from module3.semantic_processing import semantic_processing as semantics
 
 from nltk.stem import WordNetLemmatizer
 
@@ -95,7 +95,6 @@ class TextProcessor:
                 processed_sentence["nouns"] = []
                 processed_sentence["numbers"] = []
 
-
                 grammar = "NP: {<DT>?<JJ>*<NN>}"
                 cp = nltk.RegexpParser(grammar)
                 p_tree = cp.parse(tag_list)
@@ -144,7 +143,6 @@ class TextProcessor:
                     processed_sentence["pronouns"] = pronouns
                     processed_sentence["verbs"] = verbs
 
-
                 if len(processed_sentence["nouns"]) != 0 and len(pronouns) != 0:
                     if lemmatized_sent.index(processed_sentence["nouns"][0]) < lemmatized_sent.index(pronouns[0]):
                         processed_sentence["subject"] = processed_sentence["nouns"][0]
@@ -156,6 +154,13 @@ class TextProcessor:
                     processed_sentence["subject"] = pronouns[0]
                 if len(verbs) != 0:
                     processed_sentence["predicate"] = verbs[0]
+
+                processed_sentence["semantics"] = {}
+                word_list = [w.lower() for w in word_list]
+                context = semantics.remove_stopwords(word_list)
+                lemmas = semantics.remove_stopwords(lemmatized_sent)
+                for lemma in lemmas:
+                    processed_sentence["semantics"].setdefault(lemma, semantics.semantic_info(lemma, lemma, context))
 
                 map_list.append(processed_sentence)
             return map_list
@@ -169,7 +174,7 @@ class TextProcessor:
 
 
 
-text = "He's my brother."
+text = "He is my brother."
 t = TextProcessor(text)
 lista = t.processing()
 for prop in lista:
