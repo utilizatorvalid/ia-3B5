@@ -1,7 +1,8 @@
-# Cat Assistant Chat Bot <img src="cat_tied.png" alt="The Cat Assistant Chat Bot" style="width: 50px; margin-bottom: -15px;"/>
+# Cat Assistant Chat Bot
+
+![cat](./cat_tied.png "Cat Assistant")
+
 ## The Brain Module
-
-
 
 ## History:
 1. Dialog Samples
