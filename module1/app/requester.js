@@ -5,7 +5,7 @@ class Requester{
         this.options = address;
     }
 
-    doRequest(cb){
+    doRequest(hasResponseInBody, cb){
         request(this.options, function(error, response, body){
             if(error){
                 console.log(error);
@@ -15,7 +15,10 @@ class Requester{
             try {
                 resp = JSON.parse(body);
                 console.log(resp);
-                cb(resp.response);
+                if(hasResponseInBody)
+                    cb(resp.response);
+                else
+                    cb(resp);
             } catch (error) {
                 cb("Sorry, cannot answer that.");
             }
