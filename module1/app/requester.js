@@ -11,9 +11,14 @@ class Requester{
                 console.log(error);
                 cb("Sorry, cannot answer that.");
             }
-            var resp = JSON.parse(body);
-            console.log(resp);
-            cb(resp.response);
+            var resp = {};
+            try {
+                resp = JSON.parse(body);
+                console.log(resp);
+                cb(resp.response);
+            } catch (error) {
+                cb("Sorry, cannot answer that.");
+            }
         })
     }
 }

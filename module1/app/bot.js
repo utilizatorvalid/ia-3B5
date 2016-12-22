@@ -12,7 +12,7 @@ const path = require('path');
 const BotCore = require('./bot-core.js');
 
 // Init tokens if not configured
-process.env.PAGE_TOKEN = process.env.PAGE_TOKEN || "EAAaFZA3zelxoBADzf4tGuODiebmBjxXJ035n9oMumiiceZB55DmOB3Tw57khPRZBbYllwxFdFApZBov0NbHkDobse0bNgJCoan2yMUBsWzJVooQozcCnv7EPszM2tebK6d1eiIWVggas3XrpfqtKmmaJTs55i7ySUWSM0BbZASwZDZD";
+process.env.PAGE_TOKEN = process.env.PAGE_TOKEN || "EAAaFZA3zelxoBACp4nmtVhf7dPMzvRyYjUv5pcnUe3SPI84aLGmk8MVstXBBGYM7ZAZAjnveeVQQXrja1bUSgHiOAuLMPlca2yHXiYXHEwyP220XHSR2LNCRZAZAITZBuapiOf33SC3qRR8ckKVM3upjgN6MAXWvCvTv8FpprpWgZDZD";
 process.env.VERIFY_TOKEN = process.env.VERIFY_TOKEN || "thisisthecatassistantwiththetacitrainbow";
 process.env.APP_SECRET = process.env.APP_SECRET || "e70ed14b68ed0fdf2f6d6d999c213898";
 process.env.PAGE_ID = process.env.PAGE_ID || "351647861867213";
@@ -23,9 +23,9 @@ var messengerButton = "<html><head><title>Cat Assistant Chat Bot</title></head><
 // We define a new variable `bot`, which takes the tokens and secret supplied in `.env` and creates a new `Bot` instance,
 // which utilizes the messenger-bot library.
 let bot = new Bot({
-  token: process.env.PAGE_TOKEN || "EAAaFZA3zelxoBAAImuN1ZBiJoVguJ6AQUNbv09wrC8fi7S18EUcCoivw2drErBxlycwcN4hZAqycZBHxr3ZAGz9coYAZC4d6LXtm6BUGz0S1kyQ9P1CvFPsZCYNgVbu5rAbkaSmDv0UhYZAuZBwm8T0YDwNXhPZBoUnw7nbI6BPD4wfAZDZD",
-  verify: process.env.VERIFY_TOKEN || "thisisthecatassistantwiththetacitrainbow",
-  app_secret: process.env.APP_SECRET || "e70ed14b68ed0fdf2f6d6d999c213898"
+  token: process.env.PAGE_TOKEN,
+  verify: process.env.VERIFY_TOKEN,
+  app_secret: process.env.APP_SECRET
 });
 let messageProcessor = new BotCore();
 
